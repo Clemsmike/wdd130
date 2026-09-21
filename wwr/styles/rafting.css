@@ -25,10 +25,20 @@ footer {
     margin: 0 auto;
 }
 
+header {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+}
+
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+}
+
+header img {
+    width: 80px;
+    height: auto;
 }
 
 nav,
@@ -86,6 +96,8 @@ footer {
     border-top: 1px solid var(--accent1-color);
     margin-top: 20px;
     padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
 }
 
 .socialmedia {
