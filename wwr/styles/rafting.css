@@ -110,3 +110,26 @@ footer {
     height: 40px;
     margin: 5px;
 }
+
+section figure {
+    margin: 10px;
+    text-align: center;
+}
+
+section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    align-items: start;
+}
+
+section figure img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+}
+
+section figure figcaption {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
