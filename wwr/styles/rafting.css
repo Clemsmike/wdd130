@@ -27,7 +27,7 @@ footer {
 
 header {
     background-color: var(--secondary-color);
-    color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 h1,
@@ -97,7 +97,7 @@ footer {
     margin-top: 20px;
     padding: 10px;
     background-color: var(--secondary-color);
-    color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 .socialmedia {
@@ -132,4 +132,175 @@ section figure img {
 section figure figcaption {
     font-size: 0.9rem;
     margin-top: 5px;
+}
+
+/* =========================
+   CONTACT PAGE
+   ========================= */
+
+/* Contact information */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.contact-info h2 {
+    grid-column: 1;
+}
+
+.contact-info > p {
+    grid-column: 1;
+}
+
+.contact-info address {
+    grid-column: 1;
+    font-style: normal;
+}
+
+.contact-info address p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.contact-info iframe {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--accent1-color);
+}
+
+/* Employee profiles */
+main section.employees {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+    text-align: center;
+}
+
+main section.employees h2 {
+    grid-column: 1 / -1;
+}
+
+.employees figure {
+    margin: 10px;
+}
+
+.employees img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.employees figcaption {
+    margin-top: 8px;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 16px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form fieldset {
+    padding: 16px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+}
+
+.contact-form fieldset label {
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 12px 24px;
+    border: 2px solid var(--accent1-color);
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* =========================
+   RESPONSIVE LAYOUT
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
+
+    .contact-info {
+        display: block;
+    }
+
+    .contact-info iframe {
+        width: 100%;
+        min-height: 250px;
+        margin-top: 15px;
+    }
+
+    main section.employees {
+        grid-template-columns: 1fr;
+    }
+
+    .employees figure {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
 }
