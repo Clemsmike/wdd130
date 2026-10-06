@@ -41,6 +41,10 @@ header img {
     height: auto;
 }
 
+header nav a {
+    color: var(--accent1-color);
+}
+
 nav,
 p,
 section,
